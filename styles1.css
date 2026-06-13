@@ -396,4 +396,23 @@
 
 /* Back to top button uses .btt from main css */
 
+/* Empty states for JS-injected sections */
+#eventCards:empty::before,
+#timelineItems:empty::before,
+#galleryGrid:empty::before{
+  content:"No content yet. Please scroll or interact with the section.";
+  display:block;
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px dashed rgba(255,255,255,.18);
+  background: rgba(255,255,255,.03);
+  color: var(--muted);
+  font-weight: 800;
+}
+
+/* Timeline item hover polish */
+.timeline-item{ transition: transform .22s var(--ease), border-color .22s var(--ease), background .22s var(--ease) }
+.timeline-item:hover{ transform: translateY(-2px); border-color: rgba(255,255,255,.22); background: rgba(255,255,255,.06) }
+
+
 
