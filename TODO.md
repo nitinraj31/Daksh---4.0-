@@ -8,11 +8,17 @@
 - [x] Redirect registration submission to Google Form
 - [x] Validate forms and controls retain correct `for=` / `id=` bindings
 - [ ] Run a quick manual check checklist:
-
   - [ ] Theme toggle works
   - [ ] Events render + chips filter + search works
   - [ ] Timeline tabs render
   - [ ] Registration validation + success toast/summary works
   - [ ] Particles canvas loads
   - [ ] Gallery lightbox/toast/back-to-top still work
+
+## Store registration submissions into Google Sheets (via Apps Script)
+- [ ] Create Google Apps Script Web App (code + deploy)
+- [ ] Add front-end endpoint constant + fetch() to append row
+- [ ] Ensure failures don’t block redirect to Google Form
+- [ ] Verify a test submission creates a new row in the target spreadsheet
+
 

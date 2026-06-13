@@ -23,6 +23,12 @@ function validatePhone(s) {
 
 const GOOGLE_FORM_PREFILL = 'https://forms.gle/yMz8SsaYmxyoR5Z16';
 
+// Google Sheets logger endpoint (Google Apps Script Web App).
+// After deploying the Apps Script, paste the deployed Web App URL here.
+// Example: https://script.google.com/macros/s/XXXX/exec
+const SHEET_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbxjcKhJZ1IBb0lCMn3_4zDQWDTaH4EkB8GOmJMH71EI9p1CK5UcWY8XZSfMbaoHsV1V/exec';
+
+
 regForm?.addEventListener('submit', (e) => {
   e.preventDefault();
   if (regStatus) regStatus.textContent = '';
@@ -114,9 +120,35 @@ regForm?.addEventListener('submit', (e) => {
   toast('Registration confirmed', `Welcome, ${payload.fullName.split(' ')[0]}! Opening Google Form…`, '✅');
   if (qrBtn) qrBtn.dataset.lastRef = ref;
 
+  // Log to Google Sheets via Apps Script (best-effort) before redirect.
+  // If SHEET_WEBAPP_URL is not configured, this is a no-op.
+  const submittedAt = Date.now();
+
+  const tryLogToSheet = async () => {
+    if (!SHEET_WEBAPP_URL) return;
+    try {
+      await fetch(SHEET_WEBAPP_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ref,
+          submittedAt,
+          payload,
+        }),
+        // Keepalive helps in some browsers so the request can finish during navigation.
+        keepalive: true,
+      });
+    } catch (_) {
+      // Never block registration redirect.
+    }
+  };
+
   // Redirect after validation to Google Form (user completes submission there)
   setTimeout(() => {
+    tryLogToSheet();
+
     try {
+
       // If GOOGLE_FORM_PREFILL contains prefill params, it will be respected.
       // This URL is the destination; we can optionally append our ref.
       const url = new URL(GOOGLE_FORM_PREFILL);
@@ -125,6 +157,7 @@ regForm?.addEventListener('submit', (e) => {
     } catch {
       window.location.href = GOOGLE_FORM_PREFILL;
     }
+
   }, 350);
 });
 
