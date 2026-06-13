@@ -5,8 +5,10 @@
 - [ ] Improve semantic HTML + heading order across sections (no visual changes intended)
 
 - [ ] Ensure all required JS hooks/IDs/classes remain unchanged
-- [ ] Validate forms and controls retain correct `for=` / `id=` bindings
+- [x] Redirect registration submission to Google Form
+- [x] Validate forms and controls retain correct `for=` / `id=` bindings
 - [ ] Run a quick manual check checklist:
+
   - [ ] Theme toggle works
   - [ ] Events render + chips filter + search works
   - [ ] Timeline tabs render

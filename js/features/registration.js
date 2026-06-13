@@ -21,6 +21,8 @@ function validatePhone(s) {
   return /^\d{10}$/.test(String(s || ''));
 }
 
+const GOOGLE_FORM_PREFILL = 'https://forms.gle/yMz8SsaYmxyoR5Z16';
+
 regForm?.addEventListener('submit', (e) => {
   e.preventDefault();
   if (regStatus) regStatus.textContent = '';
@@ -33,6 +35,7 @@ regForm?.addEventListener('submit', (e) => {
   const phone = $('#phone');
   const gender = $('#gender');
   const eventSelection = $('#eventSelection');
+
 
   const fields = [fullName, collegeName, branch, semester, email, phone, gender, eventSelection];
   fields.forEach((f) => clearFieldError(f));
@@ -96,7 +99,7 @@ regForm?.addEventListener('submit', (e) => {
 
   const ref = 'DAKSH-' + Math.random().toString(16).slice(2, 8).toUpperCase();
 
-  if (regStatus) regStatus.textContent = 'Registration successful!';
+  if (regStatus) regStatus.textContent = 'Redirecting to Google Form…';
   if (regSummary) {
     regSummary.style.display = 'block';
     regSummary.innerHTML = `
@@ -104,11 +107,25 @@ regForm?.addEventListener('submit', (e) => {
       <span class="help" style="margin-top:6px; display:block">Reference ID: <b>${ref}</b></span>
       <span class="help" style="margin-top:6px; display:block">Category: <b>${payload.eventCategory}</b></span>
       <span class="help" style="margin-top:6px; display:block">Name: <b>${payload.fullName}</b> • ${payload.collegeName}</span>
-      <span class="help" style="margin-top:6px; display:block">We’ll announce further details on the official schedule updates.</span>
+      <span class="help" style="margin-top:6px; display:block">Please complete submission on the Google Form.</span>
     `;
   }
 
-  toast('Registration confirmed', `Welcome, ${payload.fullName.split(' ')[0]}! Your reference ID: ${ref}`, '✅');
+  toast('Registration confirmed', `Welcome, ${payload.fullName.split(' ')[0]}! Opening Google Form…`, '✅');
   if (qrBtn) qrBtn.dataset.lastRef = ref;
+
+  // Redirect after validation to Google Form (user completes submission there)
+  setTimeout(() => {
+    try {
+      // If GOOGLE_FORM_PREFILL contains prefill params, it will be respected.
+      // This URL is the destination; we can optionally append our ref.
+      const url = new URL(GOOGLE_FORM_PREFILL);
+      url.searchParams.set('ref', ref);
+      window.location.href = url.toString();
+    } catch {
+      window.location.href = GOOGLE_FORM_PREFILL;
+    }
+  }, 350);
 });
+
 

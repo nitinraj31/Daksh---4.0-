@@ -156,21 +156,42 @@ function renderEvents(filterCat = 'all', query = '') {
     })
     .join('');
 
+  const GOOGLE_FORMS_BY_CATEGORY = {
+    'Cultural Events': 'https://forms.gle/yMz8SsaYmxyoR5Z16',
+    'Performance Arts': 'https://forms.gle/kiRLx5u8YZV93LuN9',
+    'Creative Arts Events': 'https://forms.gle/yMz8SsaYmxyoR5Z16',
+    'Fun & Entertainment Events': 'https://forms.gle/yMz8SsaYmxyoR5Z16',
+    'Literary & Intellectual Events': 'https://forms.gle/yMz8SsaYmxyoR5Z16',
+  };
+
   $$('[data-register]').forEach((btn) => {
     btn.addEventListener('click', () => {
       const cat = btn.getAttribute('data-register');
-      document.getElementById('register')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
+      // Optional: pre-select category in the local form (in case the user goes back).
       const sel = $('#eventSelection');
       if (sel) {
         sel.value = cat;
         sel.dispatchEvent(new Event('change', { bubbles: true }));
       }
 
-      toast('Category selected', `You picked: ${cat}. Fill the form and submit.`, '✅');
+      // Redirect immediately to the Google Form for this specific category.
+      const dest = GOOGLE_FORMS_BY_CATEGORY[cat] || 'https://forms.gle/yMz8SsaYmxyoR5Z16';
+
+      try {
+        const url = new URL(dest);
+        // If your Google Form is not configured to read this param, it will be ignored.
+        url.searchParams.set('category', cat);
+        window.location.href = url.toString();
+      } catch {
+        window.location.href = dest;
+      }
+
+      toast('Redirecting…', `Registering for: ${cat}`, '✅');
     });
   });
 }
+
 
 function currentFilter() {
   const active = chips.find((c) => c.dataset.active === 'true');
