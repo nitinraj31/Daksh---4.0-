@@ -1,0 +1,1603 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+  <title>DAKSH - 4.0 | Government Engineering College, West Champaran</title>
+  <meta name="description" content="DAKSH - 4.0 is the annual cultural extravaganza of Government Engineering College, West Champaran. Ignite Passion • Celebrate Talent • Create Memories." />
+  <link rel="canonical" href="https://example.com/daksh-4-0" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DAKSH - 4.0" />
+  <meta property="og:description" content="Ignite Passion • Celebrate Talent • Create Memories" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- PWA (single-file friendly: no manifest file, but we include basic hints) -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <link rel="stylesheet" href="styles1.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .help--no-margin { margin: 0; }
+    .help--top-margin { margin-top: 12px; }
+    .help--top-margin-14 { margin-top: 14px; }
+    .help--top-margin-16 { margin-top: 16px; }
+    .mini-title--bottom-margin { margin-bottom: 10px; }
+    .form-grid__full { grid-column: 1 / -1; }
+    .hidden { display: none; }
+    .pill-row--top-margin { margin-top: 12px; }
+    .hero-pill-row { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; color: var(--muted); font-weight: 750; }
+    .grid-4--spaced { margin-top: 18px; }
+    .brand-logo-mark { width: 40px; height: 40px; border-radius: 14px; }
+    .countdown-note { margin: 12px 0 0; }
+    .float-pos-1 { left: 6%; top: 20%; animation-delay: .2s; transform: translateZ(0) rotate(-6deg) scale(.98); }
+    .float-pos-2 { left: 16%; top: 60%; animation-delay: 1.1s; transform: translateZ(0) rotate(8deg) scale(.96); }
+    .float-pos-3 { right: 12%; top: 18%; animation-delay: .7s; transform: translateZ(0) rotate(-8deg) scale(1.02); }
+    .float-pos-4 { right: 18%; top: 60%; animation-delay: 1.35s; transform: translateZ(0) rotate(5deg) scale(.95); }
+    .float-pos-5 { left: 44%; top: 12%; animation-delay: 1.75s; transform: translateZ(0) rotate(4deg) scale(.92); }
+    .g-hero { height: 160px; border-radius: 16px; }
+    .g-hero--theme1 { background: linear-gradient(135deg, rgba(108,99,255,.30), rgba(0,217,255,.14)), radial-gradient(circle at 20% 20%, rgba(255,101,132,.35), transparent 55%); }
+    .g-hero--theme2 { background: linear-gradient(135deg, rgba(0,217,255,.22), rgba(255,101,132,.14)), radial-gradient(circle at 75% 25%, rgba(108,99,255,.30), transparent 55%); }
+    .g-hero--theme3 { background: linear-gradient(135deg, rgba(255,101,132,.20), rgba(108,99,255,.14)), radial-gradient(circle at 30% 35%, rgba(0,217,255,.25), transparent 55%); }
+    .g-hero--theme4 { background: linear-gradient(135deg, rgba(108,99,255,.25), rgba(255,101,132,.12)), radial-gradient(circle at 80% 25%, rgba(0,217,255,.22), transparent 55%); }
+    .g-hero--theme5 { background: linear-gradient(135deg, rgba(0,217,255,.20), rgba(108,99,255,.14)), radial-gradient(circle at 30% 25%, rgba(255,101,132,.22), transparent 55%); }
+    .g-hero--theme6 { background: linear-gradient(135deg, rgba(255,101,132,.20), rgba(0,217,255,.14)), radial-gradient(circle at 75% 25%, rgba(108,99,255,.25), transparent 55%); }
+    .center-row { display: flex; justify-content: center; margin-top: 14px; }
+  </style>
+
+  <!-- legacy inline styles removed (moved to css/daksh.css) -->
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading" role="status" aria-live="polite">
+    <div class="loader-card">
+      <div class="loader-top">
+        <div class="logo-mark" aria-hidden="true"></div>
+        <div>
+          <div class="loader-title">DAKSH - 4.0</div>
+          <div class="help help--no-margin">Preparing the cultural universe…</div>
+        </div>
+      </div>
+      <div class="progress-bar" aria-hidden="true"><div class="progress-fill"></div></div>
+      <div class="help help--top-margin">Tip: Use the theme toggle for Dark/Light experience.</div>
+    </div>
+  </div>
+
+  <div id="progress" aria-hidden="true"></div>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-row">
+      <a class="brand" href="#top" aria-label="DAKSH - 4.0 Home">
+        <div class="logo-mark brand-logo-mark" aria-hidden="true"></div>
+        <div class="word">
+          <b>DAKSH - 4.0</b>
+          <span>Ignite Passion • Celebrate Talent</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#register">Register</a>
+        <a href="#contact">Contact</a>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark and light mode" title="Toggle Theme">
+          <!-- moon/sun icon swaps in JS -->
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-card reveal" data-reveal>
+            <canvas id="particles" aria-hidden="true"></canvas>
+
+            <div class="float-icons" aria-hidden="true">
+              <div class="float float-pos-1"><span>🎭</span></div>
+              <div class="float float-pos-2"><span>🎶</span></div>
+              <div class="float float-pos-3"><span>🎨</span></div>
+              <div class="float float-pos-4"><span>🎤</span></div>
+              <div class="float float-pos-5"><span>✨</span></div>
+            </div>
+
+            <div class="hero-inner">
+              <div class="kicker"><i aria-hidden="true"></i> Government Engineering College, West Champaran</div>
+
+              <h1 class="hero-title">
+                <span class="grad">DAKSH - 4.0</span>
+              </h1>
+
+              <div class="tagline">Ignite Passion • Celebrate Talent • Create Memories</div>
+
+              <div class="hero-actions" role="group" aria-label="Hero actions">
+                <a class="btn primary" href="#register"><span aria-hidden="true">⚡</span> Register Now <span class="arrow" aria-hidden="true">→</span></a>
+                <a class="btn" href="#events"><span aria-hidden="true">🗂️</span> Explore Events <span class="arrow" aria-hidden="true">→</span></a>
+                <a class="btn" href="#schedule"><span aria-hidden="true">📅</span> View Schedule <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+
+              <div class="hero-pill-row">
+                <span class="pill">🎉 Cultural • Creative • Innovation</span>
+                <span class="pill">🏆 Prizes & Awards</span>
+                <span class="pill">🌍 Multi-college Participation</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="side-stack" aria-label="Countdown and highlights">
+            <div class="glass-box reveal" data-reveal>
+              <div class="mini-title"><span class="badge" aria-hidden="true">⏳</span> Countdown</div>
+              <div class="countdown" role="timer" aria-live="polite" aria-atomic="true">
+                <div class="time-unit"><b id="cdDays">00</b><small>Days</small></div>
+                <div class="time-unit"><b id="cdHours">00</b><small>Hours</small></div>
+                <div class="time-unit"><b id="cdMins">00</b><small>Mins</small></div>
+                <div class="time-unit"><b id="cdSecs">00</b><small>Secs</small></div>
+              </div>
+              <p class="help help--top-margin">Mark your calendars for a cultural weekend full of performances, art, and tech creativity.</p>
+            </div>
+
+            <div class="glass-box reveal" data-reveal>
+              <div class="mini-title"><span class="badge" aria-hidden="true">🏅</span> Event Statistics</div>
+              <div class="stat-grid">
+                <div class="stat-card"><b><span data-count="500">0</span>+</b><span>Participants</span></div>
+                <div class="stat-card"><b><span data-count="50">0</span>+</b><span>Events</span></div>
+                <div class="stat-card"><b>Multi</b><span>College Participation</span></div>
+                <div class="stat-card"><b>Prizes</b><span>Exciting Prizes & Awards</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <div>
+            <h2>About DAKSH - 4.0</h2>
+            <p>
+              DAKSH - 4.0 is the annual cultural extravaganza of Government Engineering College, West Champaran, bringing together students from various institutions to celebrate talent, creativity, innovation, and culture through competitions, performances, exhibitions, and entertainment.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-4 grid-4--spaced" aria-label="Achievements">
+          <div class="card reveal" data-reveal>
+            <div class="emoji" aria-hidden="true">🔥</div>
+            <h3>Ignite Passion</h3>
+            <p>Performances and challenges designed to push creativity to the spotlight.</p>
+            <div class="pill-row"><span class="pill">Stage energy</span><span class="pill">Talent hunts</span></div>
+          </div>
+          <div class="card reveal" data-reveal>
+            <div class="emoji" aria-hidden="true">🏆</div>
+            <h3>Celebrate Talent</h3>
+            <p>Competitions with fair judging and rewards that motivate every participant.</p>
+            <div class="pill-row"><span class="pill">Prizes</span><span class="pill">Certificates</span></div>
+          </div>
+          <div class="card reveal" data-reveal>
+            <div class="emoji" aria-hidden="true">🎨</div>
+            <h3>Create Memories</h3>
+            <p>Unforgettable moments across dance, drama, art, literature, and more.</p>
+            <div class="pill-row"><span class="pill">Gallery</span><span class="pill">Showcases</span></div>
+          </div>
+          <div class="card reveal" data-reveal>
+            <div class="emoji" aria-hidden="true">🤝</div>
+            <h3>Multi-College Unity</h3>
+            <p>Students from diverse backgrounds come together to celebrate culture.</p>
+            <div class="pill-row"><span class="pill">Collaboration</span><span class="pill">Community</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <div>
+            <h2>Events That Match Your Vibe</h2>
+            <p>Search and filter categories. Tap any event category to register for the bundle of experiences inside.</p>
+          </div>
+        </div>
+
+        <div class="events-tools reveal" data-reveal>
+          <div class="search" role="search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
+              <path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <input id="eventSearch" type="search" placeholder="Search events (e.g., dance, quiz, gaming)" aria-label="Search events" />
+          </div>
+
+          <div class="filters" aria-label="Event category filters">
+            <button class="chip" type="button" data-filter="all" data-active="true">All</button>
+            <button class="chip" type="button" data-filter="Cultural Events">Cultural</button>
+            <button class="chip" type="button" data-filter="Performance Arts">Performing</button>
+            <button class="chip" type="button" data-filter="Creative Arts Events">Creative</button>
+            <button class="chip" type="button" data-filter="Fun & Entertainment Events">Fun</button>
+            <button class="chip" type="button" data-filter="Literary & Intellectual Events">Literary</button>
+          </div>
+        </div>
+
+        <div class="grid-3" id="eventCards" aria-live="polite">
+          <!-- Cards injected by JS for better search/filter performance -->
+        </div>
+
+        <div class="help reveal" data-reveal style="margin-top: 16px">
+          <b>Tip:</b> Filters work instantly. You can also scroll to schedule, gallery, and registration.
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIAL ATTRACTIONS -->
+    <section id="attractions">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <div>
+            <h2>Special Attractions</h2>
+            <p>Big experiences, big energy. Crafted for memorable nights and vibrant days.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card reveal" data-reveal>
+            <div class="g-hero g-hero--theme1" aria-hidden="true"></div>
+            <h3>Food Festival</h3><p>Savor flavors with themed stalls and crowd-favorite bites.</p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <div class="g-hero g-hero--theme2" aria-hidden="true"></div>
+            <h3>Cultural Exhibition</h3><p>Live showcases of art, heritage, and student innovations.</p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <div class="g-hero g-hero--theme3" aria-hidden="true"></div>
+            <h3>Art Gallery</h3><p>Gallery walk with interactive displays and creative installations.</p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <div class="g-hero g-hero--theme4" aria-hidden="true"></div>
+            <h3>Talent Showcase</h3><p>Spotlight performances curated across disciplines.</p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <div class="g-hero g-hero--theme5" aria-hidden="true"></div>
+            <h3>Open Air Concert</h3><p>Live sets, vocals, and high-energy crowd moments.</p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <div class="g-hero g-hero--theme6" aria-hidden="true"></div>
+            <h3>Fireworks Show</h3><p>A spectacular finale to light up the night.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section id="schedule">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <div>
+            <h2>Event Schedule (Interactive Timeline)</h2>
+            <p>Choose a day to view events with time, venue, and coordinator details.</p>
+          </div>
+        </div>
+
+        <div class="schedule-wrap">
+          <div class="schedule-tabs" aria-label="Day selection">
+            <button class="tab" type="button" data-day="day1" data-active="true">Day 1</button>
+            <button class="tab" type="button" data-day="day2" data-active="true">Day 2</button>
+            <button class="tab" type="button" data-day="day3" data-active="true">Day 3</button>
+            <button class="tab" type="button" data-day="day4" data-active="true">Day 4</button>
+
+          </div>
+
+          <div class="timeline" aria-live="polite">
+            <div id="timelineItems"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <div>
+            <h2>Gallery</h2>
+            <p>Lazy-loaded images + lightbox preview. Video highlights included.</p>
+          </div>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid" aria-label="Gallery masonry grid">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRATION -->
+    <section id="register">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <div>
+            <h2>Registration</h2>
+            <p>Submit your details. Get a success popup, a summary, and QR-style confirmation option.</p>
+          </div>
+        </div>
+
+        <div class="glass-box reveal" data-reveal>
+          <form id="regForm" novalidate>
+            <div class="form-grid">
+              <div>
+                <label for="fullName">Full Name</label>
+                <div class="field"><input id="fullName" name="fullName" type="text" placeholder="Your name" required minlength="2" autocomplete="name" /></div>
+              </div>
+              <div>
+                <label for="collegeName">College Name</label>
+                <div class="field"><input id="collegeName" name="collegeName" type="text" placeholder="Your college" required minlength="2" /></div>
+              </div>
+              <div>
+                <label for="branch">Branch</label>
+                <div class="field"><input id="branch" name="branch" type="text" placeholder="CSE, IT, ECE…" required minlength="2" /></div>
+              </div>
+              <div>
+                <label for="semester">Semester</label>
+                <div class="field">
+                  <select id="semester" name="semester" required>
+                    <option value="">Select</option>
+                    <option>1st</option><option>2nd</option><option>3rd</option><option>4th</option>
+                    <option>5th</option><option>6th</option><option>7th</option><option>8th</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <div class="field"><input id="email" name="email" type="email" placeholder="name@example.com" required autocomplete="email" /></div>
+              </div>
+              <div>
+                <label for="phone">Phone Number</label>
+                <div class="field"><input id="phone" name="phone" type="tel" placeholder="10-digit mobile" required inputmode="tel" minlength="10" maxlength="10" /> </div>
+              </div>
+              <div>
+                <label for="gender">Gender</label>
+                <div class="field">
+                  <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option>Male</option><option>Female</option><option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="eventSelection">Event Selection</label>
+                <div class="field">
+                  <select id="eventSelection" name="eventSelection" required>
+                    <option value="">Choose an event category</option>
+                    <!-- options injected by JS -->
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grid__full">
+                <div class="help">
+                  By registering, you confirm that you will follow rules and event guidelines. Certificates will be provided to eligible participants.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit"><span aria-hidden="true">📝</span> Submit Registration <span class="arrow" aria-hidden="true">→</span></button>
+              <button class="btn" type="button" id="qrBtn"><span aria-hidden="true">📱</span> QR Option <span class="arrow" aria-hidden="true">→</span></button>
+              <div class="help help--no-margin" id="regStatus" role="status" aria-live="polite"></div>
+            </div>
+          </form>
+
+          <div id="regSummary" class="help help--top-margin-14 hidden"></div>
+
+          <div class="help help--top-margin-14">
+            <b>Accessibility:</b> Form fields are labeled, validation uses clear messages, and focus states are enabled.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <div>
+            <h2>Organizing Team</h2>
+            <p>Meet the faculty coordinators, student coordinators, event heads, and volunteers behind DAKSH.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card reveal" data-reveal>
+            <div class="profile">
+              <div class="avatar" aria-hidden="true">
+                <img class="avatar-img" alt="Pooja Updhya" src="college-event-portal/college-event-portal/assets/images/pooja-updhya.jpg" onerror="this.style.display='none'; this.closest('.avatar').textContent='🎓'" />
+                <span aria-hidden="true">🎓</span>
+              </div>
+              <div>
+                <b>Faculty Coordinator</b>
+                <span>Pooja Updhya</span>
+              </div>
+            </div>
+            <div class="social">
+              <a class="call-btn is-empty" href="#" onclick="return false" aria-label="Call Pooja Updhya"><span aria-hidden="true">📞</span> Call</a>
+              <a href="#" onclick="return false" aria-label="Email"><span aria-hidden="true">✉️</span> Email</a>
+            </div>
+          </div>
+
+          <div class="card reveal" data-reveal>
+            <div class="profile">
+              <div class="avatar" aria-hidden="true">
+                <img class="avatar-img" alt="Nitin Raj" src="college-event-portal/college-event-portal/assets/images/nitin-raj.jpg" onerror="this.style.display='none'; this.closest('.avatar').textContent='🧩'" />
+                <span aria-hidden="true">🧩</span>
+              </div>
+              <div>
+                <b>Student Coordinator</b>
+                <span>Nitin Raj</span>
+              </div>
+            </div>
+            <div class="social">
+              <a class="call-btn is-empty" href="#" onclick="return false" aria-label="Call Nitin Raj"><span aria-hidden="true">📞</span> Call</a>
+              <a href="#" onclick="return false"><span aria-hidden="true">📷</span> Instagram</a>
+            </div>
+          </div>
+
+          <div class="card reveal" data-reveal>
+            <div class="profile">
+              <div class="avatar" aria-hidden="true">
+                <img class="avatar-img" alt="Shubh Laxmi" src="college-event-portal/college-event-portal/assets/images/shubh-laxmi.jpg" onerror="this.style.display='none'; this.closest('.avatar').textContent='🧩'" />
+                <span aria-hidden="true">🧩</span>
+              </div>
+              <div>
+                <b>Student Coordinator</b>
+                <span>Shubh Laxmi</span>
+              </div>
+            </div>
+            <div class="social">
+              <a class="call-btn is-empty" href="#" onclick="return false" aria-label="Call Shubh Laxmi"><span aria-hidden="true">📞</span> Call</a>
+              <a href="#" onclick="return false"><span aria-hidden="true">📷</span> Instagram</a>
+            </div>
+          </div>
+
+          <div class="card reveal" data-reveal>
+            <div class="profile">
+              <div class="avatar" aria-hidden="true">
+                <img class="avatar-img" alt="Uday" src="college-event-portal/college-event-portal/assets/images/uday.jpg" onerror="this.style.display='none'; this.closest('.avatar').textContent='🎭'" />
+                <span aria-hidden="true">🎭</span>
+              </div>
+              <div>
+                <b>Event Head Coordinator</b>
+                <span>Uday</span>
+              </div>
+            </div>
+            <div class="social">
+              <a class="call-btn is-empty" href="#" onclick="return false" aria-label="Call Uday"><span aria-hidden="true">📞</span> Call</a>
+              <a href="#" onclick="return false"><span aria-hidden="true">📩</span> Contact</a>
+            </div>
+          </div>
+
+          <div class="card reveal" data-reveal>
+            <div class="profile">
+              <div class="avatar" aria-hidden="true">
+                <img class="avatar-img" alt="Sujay" src="college-event-portal/college-event-portal/assets/images/sujay.jpg" onerror="this.style.display='none'; this.closest('.avatar').textContent='🧩'" />
+                <span aria-hidden="true">🧩</span>
+              </div>
+              <div>
+                <b>Student Coordinator</b>
+                <span>Sujay</span>
+              </div>
+            </div>
+            <div class="social">
+              <a class="call-btn is-empty" href="#" onclick="return false" aria-label="Call Sujay"><span aria-hidden="true">📞</span> Call</a>
+              <a href="#" onclick="return false"><span aria-hidden="true">in</span> LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="card reveal" data-reveal>
+            <div class="profile">
+              <div class="avatar" aria-hidden="true">
+                <img class="avatar-img" alt="Sayjeet" src="college-event-portal/college-event-portal/assets/images/sayjeet.jpg" onerror="this.style.display='none'; this.closest('.avatar').textContent='🧩'" />
+                <span aria-hidden="true">🧩</span>
+              </div>
+              <div>
+                <b>Student Coordinator</b>
+                <span>Sayjeet</span>
+              </div>
+            </div>
+            <div class="social">
+              <a class="call-btn is-empty" href="#" onclick="return false" aria-label="Call Sayjeet"><span aria-hidden="true">📞</span> Call</a>
+              <a href="#" onclick="return false"><span aria-hidden="true">in</span> LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="card reveal" data-reveal>
+            <div class="profile">
+              <div class="avatar" aria-hidden="true">
+                <img class="avatar-img" alt="Vijay Kr Gupta" src="college-event-portal/college-event-portal/assets/images/vijay-kr-gupta.jpg" onerror="this.style.display='none'; this.closest('.avatar').textContent='🤝'" />
+                <span aria-hidden="true">🤝</span>
+              </div>
+              <div>
+                <b>Patron</b>
+                <span>Vijay Kr Gupta</span>
+              </div>
+            </div>
+            <div class="social">
+              <a class="call-btn is-empty" href="#" onclick="return false" aria-label="Call Vijay Kr Gupta"><span aria-hidden="true">📞</span> Call</a>
+              <a href="#" onclick="return false"><span aria-hidden="true">✉️</span> Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section id="sponsors">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <div>
+            <h2>Sponsors & Partners</h2>
+            <p>Thanks to organizations supporting student excellence.</p>
+          </div>
+        </div>
+
+        <div class="glass-box reveal" data-reveal>
+          <div class="mini-title mini-title--bottom-margin"><span class="badge" aria-hidden="true">🤝</span> Logo Slider</div>
+          <div class="logo-strip" aria-label="Sponsor logos slider">
+            <div class="logo-track" id="logoTrack">
+              <!-- duplicate set created by JS -->
+            </div>
+          </div>
+          <div class="help help--top-margin">Hover logos for highlight. (Replace placeholder names with real logos when available.)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <div>
+            <h2>What Participants Say</h2>
+            <p>Student, alumni, and guest reviews—animated carousel experience.</p>
+          </div>
+        </div>
+
+        <div class="carousel reveal" data-reveal aria-label="Testimonials carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- slides injected by JS -->
+          </div>
+          <div class="center-row">
+            <div class="dots" id="carouselDots" aria-label="Carousel pagination">
+              <!-- dots injected -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <div>
+            <h2>FAQ</h2>
+            <p>Quick answers to common registration and event questions.</p>
+          </div>
+        </div>
+
+        <div class="reveal" data-reveal>
+          <details class="faq" open>
+            <summary><span>How do I register for DAKSH - 4.0?</span><span aria-hidden="true">➕</span></summary>
+            <p>Use the Registration section, fill your details, and select an event category. Submit to receive a success popup and QR option.</p>
+          </details>
+
+          <details class="faq">
+            <summary><span>Who is eligible to participate?</span><span aria-hidden="true">➕</span></summary>
+            <p>Students from recognized institutions are welcome. Eligibility rules may vary by event category—check guidelines at submission and notice updates.</p>
+          </details>
+
+          <details class="faq">
+            <summary><span>What are the rules & regulations?</span><span aria-hidden="true">➕</span></summary>
+            <p>Participants must adhere to event-specific rules, timelines, and conduct. Failure to follow guidelines may lead to disqualification.</p>
+          </details>
+
+          <details class="faq">
+            <summary><span>Do we get certificates & prizes?</span><span aria-hidden="true">➕</span></summary>
+            <p>Eligible participants receive certificates. Top performers receive awards/prizes as per judging and event criteria.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <style>
+        .contact-grid { align-items: start; }
+        .grid-span-2 { grid-column: span 2; }
+        .card-title--no-top-margin { margin-top: 0; }
+        .social--top-margin { margin-top: 10px; }
+        .card--full-span { grid-column: 1 / -1; padding: 14px; }
+        .map-news-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 14px; align-items: stretch; }
+        .map-embed { border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.05); }
+        .map-embed iframe { border: 0; display: block; }
+      </style>
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <div>
+            <h2>Contact</h2>
+            <p>Need help? Reach out and we’ll get you sorted.</p>
+          </div>
+        </div>
+
+        <div class="grid-3 contact-grid">
+          <div class="card reveal grid-span-2" data-reveal>
+            <form id="contactForm" class="form-grid" novalidate>
+              <div>
+                <label for="cName">Full Name</label>
+                <div class="field"><input id="cName" name="cName" type="text" placeholder="Your name" required minlength="2" /></div>
+              </div>
+              <div>
+                <label for="cEmail">Email</label>
+                <div class="field"><input id="cEmail" name="cEmail" type="email" placeholder="name@example.com" required /></div>
+              </div>
+              <div class="form-grid__full">
+                <label for="cMsg">Message</label>
+                <div class="field"><textarea id="cMsg" name="cMsg" placeholder="How can we help you?" required minlength="10"></textarea></div>
+              </div>
+              <div class="form-grid__full form-actions">
+                <button class="btn primary" type="submit"><span aria-hidden="true">💬</span> Send Message <span class="arrow" aria-hidden="true">→</span></button>
+                <div class="help help--no-margin" id="contactStatus" role="status" aria-live="polite"></div>
+              </div>
+            </form>
+          </div>
+
+          <div class="card reveal" data-reveal>
+            <h3 class="card-title--no-top-margin">College Details</h3>
+            <p><b>Organized by:</b> Government Engineering College, West Champaran</p>
+            <p><b>Email:</b> dakshgecwc@gmail.com</p>
+            <p><b>Phone:</b> +91 9262947618</p>
+
+            <div class="help help--top-margin">
+              <b>Social:</b>
+              <div class="social social--top-margin">
+                <a href="#" onclick="return false"><span aria-hidden="true">▶</span> YouTube</a>
+                <a href="#" onclick="return false"><span aria-hidden="true">📸</span> Instagram</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal card--full-span" data-reveal>
+            <div class="map-news-grid">
+              <div>
+                <h3 class="card-title--no-top-margin">Google Maps</h3>
+                <p class="help help--no-margin">Replace the iframe src with the exact campus pin when ready.</p>
+                <div class="map-embed">
+                  <iframe class="map-iframe" title="DAKSH location map" loading="lazy"
+                    src="https://www.google.com/maps?q=kumarbaghi%2C%20Bihar&output=embed" 
+                    width="100%" height="260"></iframe>
+                </div>
+              </div>
+              <div>
+                <h3 class="card-title--no-top-margin">Newsletter</h3>
+                <p class="help help--no-margin">Get updates for schedule, event announcements, and winners.</p>
+                <form id="newsletterForm">
+                  <div class="field">
+                    <label class="sr-only" for="newsEmail">Email</label>
+                    <input id="newsEmail" type="email" placeholder="Email address" required />
+                  </div>
+                  <div class="form-actions help--top-margin">
+                    <button class="btn primary" type="submit"><span aria-hidden="true">📬</span> Subscribe <span class="arrow" aria-hidden="true">→</span></button>
+                  </div>
+                  <div class="help" id="newsStatus"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="foot-grid">
+          <div>
+            <h3>DAKSH - 4.0</h3>
+            <p class="help help--no-margin">Ignite Passion • Celebrate Talent • Create Memories</p>
+            <div class="pill-row pill-row--top-margin">
+              <span class="pill">🏛️ GEC West Champaran</span>
+              <span class="pill">🎭 Culture Fest</span>
+              <span class="pill">✨ Premium Experience</span>
+            </div>
+          </div>
+          <div>
+            <h3>Quick Links</h3>
+            <a href="#events">Events</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#register">Register</a>
+          </div>
+          <div>
+            <h3>Event Links</h3>
+            <a href="#attractions">Special Attractions</a>
+            <a href="#team">Team</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <a href="#contact">Email & Phone</a>
+            <a href="#contact">Campus Address</a>
+            <a href="#contact">Social Links</a>
+          </div>
+        </div>
+
+        <div class="copy">
+          <span>© <span id="year"></span> DAKSH - 4.0. All rights reserved.</span>
+          <span>Built with glassmorphism • responsive • accessible UI</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast-wrap" id="toastWrap" aria-live="polite" aria-atomic="true"></div>
+
+    <button class="btt" id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Gallery preview">
+      <div class="lightbox-card">
+        <div class="lightbox-top">
+          <b id="lightboxTitle">Preview</b>
+          <button class="icon-btn" id="lightboxClose" type="button" aria-label="Close preview">✕</button>
+        </div>
+        <div class="lightbox-media" id="lightboxMedia"></div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="index.js" defer></script>
+
+
+  <!-- legacy inline script block removed; all functionality initialized from index.js modules -->
+
+
+    function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
+
+    /* =============== Theme Toggle =============== */
+    const themeToggle = $('#themeToggle');
+    const themeIcon = $('#themeIcon');
+
+    function setTheme(theme){
+      document.documentElement.dataset.theme = theme;
+      try{ localStorage.setItem('daksh-theme', theme); }catch(e){}
+      themeIcon.textContent = theme === 'light' ? '☀️' : '🌙';
+      // update theme-color meta
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if(meta) meta.setAttribute('content', theme === 'light' ? '#F8FAFC' : '#0F172A');
+    }
+
+    (function initTheme(){
+      let saved = null;
+      try{ saved = localStorage.getItem('daksh-theme'); }catch(e){}
+      const systemPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      const theme = saved || (systemPrefersLight ? 'light' : 'dark');
+      setTheme(theme);
+    })();
+
+    themeToggle?.addEventListener('click', ()=>{
+      const curr = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+      setTheme(curr === 'light' ? 'dark' : 'light');
+    });
+
+    /* =============== Loading Screen =============== */
+    window.addEventListener('load', ()=>{
+      const loading = $('#loading');
+      if(!loading) return;
+      setTimeout(()=>{
+        loading.style.transition = 'opacity .35s var(--ease), transform .35s var(--ease)';
+        loading.style.opacity = '0';
+        loading.style.transform = 'translateY(-8px)';
+        setTimeout(()=> loading.remove(), 380);
+      }, 550);
+    });
+
+    /* =============== Scroll Progress + Back to Top =============== */
+    const progress = $('#progress');
+    const backToTop = $('#backToTop');
+
+    function onScroll(){
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      const pct = max > 0 ? (doc.scrollTop / max) * 100 : 0;
+      if(progress) progress.style.width = pct + '%';
+
+      if(backToTop){
+        backToTop.dataset.show = doc.scrollTop > 600 ? 'true' : 'false';
+      }
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+
+    backToTop?.addEventListener('click', ()=>{
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+
+    /* =============== Scroll Reveal =============== */
+    const revealEls = $$('[data-reveal], .reveal[data-reveal]');
+
+    const io = new IntersectionObserver((entries)=>{
+      for(const e of entries){
+        if(e.isIntersecting){
+          e.target.dataset.visible = 'true';
+          io.unobserve(e.target);
+        }
+      }
+    }, {threshold: .14});
+
+    revealEls.forEach(el=>{
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+
+    /* =============== Animated Counters =============== */
+    function animateCount(el, target){
+      const start = 0;
+      const duration = 1100;
+      const t0 = performance.now();
+      function tick(t){
+        const p = clamp((t - t0) / duration, 0, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        const val = Math.round(start + (target - start) * eased);
+        el.textContent = val;
+        if(p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    (function counters(){
+      const counters = $$('[data-count]');
+      if(counters.length === 0) return;
+
+      const cIO = new IntersectionObserver((entries)=>{
+        for(const e of entries){
+          if(e.isIntersecting){
+            const el = e.target;
+            const target = parseInt(el.getAttribute('data-count') || '0', 10);
+            animateCount(el, target);
+            cIO.unobserve(el);
+          }
+        }
+      }, {threshold: .3});
+
+      counters.forEach(el=>cIO.observe(el));
+    })();
+
+    /* =============== Countdown Timer =============== */
+    // Set a reasonable future date (customize as needed)
+    // Using next occurrence around mid-January if already passed.
+    const targetISO = (()=>{
+      const now = new Date();
+      let year = now.getFullYear();
+      const candidate = new Date(`${year}-01-18T17:00:00`);
+      if(candidate.getTime() < now.getTime()) {
+        year += 1;
+      }
+      return `${year}-01-18T17:00:00`;
+    })();
+
+    const cdDays = $('#cdDays');
+    const cdHours = $('#cdHours');
+    const cdMins = $('#cdMins');
+    const cdSecs = $('#cdSecs');
+
+    function updateCountdown(){
+      const target = new Date(targetISO).getTime();
+      const now = Date.now();
+      const diff = Math.max(0, target - now);
+
+      const days = Math.floor(diff / (1000*60*60*24));
+      const hours = Math.floor((diff / (1000*60*60)) % 24);
+      const mins = Math.floor((diff / (1000*60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      const pad2 = (n)=> String(n).padStart(2,'0');
+      if(cdDays) cdDays.textContent = pad2(days);
+      if(cdHours) cdHours.textContent = pad2(hours);
+      if(cdMins) cdMins.textContent = pad2(mins);
+      if(cdSecs) cdSecs.textContent = pad2(secs);
+
+      if(diff === 0){
+        clearInterval(intv);
+      }
+    }
+    updateCountdown();
+    const intv = setInterval(updateCountdown, 1000);
+
+    /* =============== Particles Background (Canvas) =============== */
+    (function particles(){
+      const canvas = document.getElementById('particles');
+      if(!canvas) return;
+      const ctx = canvas.getContext('2d', {alpha:true});
+      if(!ctx) return;
+
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(prefersReduced){ canvas.remove(); return; }
+
+      const DPR = Math.min(2, window.devicePixelRatio || 1);
+      let w=0,h=0;
+      function resize(){
+        const rect = canvas.getBoundingClientRect();
+        w = Math.floor(rect.width);
+        h = Math.floor(rect.height);
+        canvas.width = Math.floor(w * DPR);
+        canvas.height = Math.floor(h * DPR);
+        canvas.style.width = w + 'px';
+        canvas.style.height = h + 'px';
+        ctx.setTransform(DPR,0,0,DPR,0,0);
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      const colors = [getComputedStyle(document.documentElement).getPropertyValue('--primary').trim(),
+                      getComputedStyle(document.documentElement).getPropertyValue('--accent').trim(),
+                      getComputedStyle(document.documentElement).getPropertyValue('--secondary').trim()];
+
+      const count = Math.floor((w*h) / 38000); // adaptive
+      const particlesArr = [];
+      for(let i=0;i<count;i++){
+        particlesArr.push({
+          x: Math.random()*w,
+          y: Math.random()*h,
+          r: 1.2 + Math.random()*2.1,
+          vx: (Math.random()-.5)*0.35,
+          vy: (Math.random()-.5)*0.35,
+          c: colors[i % colors.length],
+          a: 0.35 + Math.random()*0.45
+        });
+      }
+
+      function draw(){
+        ctx.clearRect(0,0,w,h);
+
+        // faint grid shimmer
+        ctx.globalAlpha = 0.06;
+        ctx.strokeStyle = 'rgba(255,255,255,1)';
+        for(let x=0;x<w;x+=90){
+          ctx.beginPath();
+          ctx.moveTo(x,0);
+          ctx.lineTo(x,h);
+          ctx.stroke();
+        }
+
+        for(let y=0;y<h;y+=90){
+          ctx.beginPath();
+          ctx.moveTo(0,y);
+          ctx.lineTo(w,y);
+          ctx.stroke();
+        }
+        ctx.globalAlpha = 1;
+
+        // connections
+        for(let i=0;i<particlesArr.length;i++){
+          const p = particlesArr[i];
+          p.x += p.vx; p.y += p.vy;
+
+          if(p.x< -20) p.x = w+20;
+          if(p.x> w+20) p.x = -20;
+          if(p.y< -20) p.y = h+20;
+          if(p.y> h+20) p.y = -20;
+
+          ctx.beginPath();
+          ctx.fillStyle = p.c;
+          ctx.globalAlpha = p.a;
+          ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+          ctx.fill();
+          ctx.globalAlpha = 1;
+
+          for(let j=i+1;j<particlesArr.length;j++){
+            const q = particlesArr[j];
+            const dx = p.x-q.x, dy=p.y-q.y;
+            const dist = Math.hypot(dx,dy);
+            if(dist < 120){
+              const alpha = (1 - dist/120) * 0.35;
+              ctx.strokeStyle = p.c;
+              ctx.globalAlpha = alpha;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(p.x,p.y);
+              ctx.lineTo(q.x,q.y);
+              ctx.stroke();
+              ctx.globalAlpha = 1;
+            }
+          }
+        }
+
+        requestAnimationFrame(draw);
+      }
+      requestAnimationFrame(draw);
+    })();
+
+    /* =============== Events Data + Render + Filters =============== */
+    const eventsData = [
+      {cat:'Cultural Events', emoji:'🕺', title:'Dance & Music', items:[
+        'Solo Dance Competition','Group Dance Competition','Solo Singing Competition','Duet Singing Competition','Battle of Bands','Beatboxing Competition','Instrumental Music Competition','Rap Battle','DJ Battle','Folk Dance Competition','Classical Dance Competition','Western Dance Competition'
+      ]},
+      {cat:'Performance Arts', emoji:'🎭', title:'Performance Arts', items:[
+        'Drama Competition','Street Play (Nukkad Natak)','Fashion Show','Mime Show','Stand-Up Comedy','Poetry Recitation','Shayari Competition','Storytelling Contest','Talent Hunt','Mono Acting','Skit Competition','Mock Press Conference','Anchoring Competition','Voice of the Campus','Cultural Parade','Flash Mob','Cultural Quiz','Celebrity Night'
+      ]},
+      {cat:'Creative Arts Events', emoji:'🎨', title:'Creative Arts Events', items:[
+        'Painting Competition','Sketching Competition','Rangoli Competition','Face Painting','Poster Making','Graffiti Art','Mandala Art','Photography Contest','Short Film Competition','Reel Making Contest','Meme Creation Contest','Digital Art Competition','Clay Modeling','Best Out of Waste','Calligraphy Competition'
+      ]},
+      {cat:'Fun & Entertainment Events', emoji:'🎮', title:'Fun & Entertainment Events', items:[
+        'Treasure Hunt','Escape Room Challenge','Gaming Tournament','LAN Gaming Competition','BGMI Tournament','Free Fire Tournament','FIFA Tournament','Chess Competition','Tambola','Fun Fair','Minute to Win It','Dumb Charades','Pictionary','Spin the Wheel','Lucky Draw'
+      ]},
+      {cat:'Literary & Intellectual Events', emoji:'📚', title:'Literary & Intellectual Events', items:[
+        'Debate Competition','Group Discussion','Extempore Speech','Public Speaking Contest','Essay Writing','Creative Writing','Quiz Competition','Mock Parliament','Business Pitch Competition','Startup Idea Challenge'
+      ]}
+    ];
+
+    const eventCards = $('#eventCards');
+    const eventSearch = $('#eventSearch');
+    const chips = $$('.chip');
+
+    function escapeHTML(value){
+      return String(value).replace(/[&<>"']/g, ch => ({
+        '&':'&amp;',
+        '<':'&lt;',
+        '>':'&gt;',
+        '"':'&quot;',
+        "'":'&#39;'
+      }[ch]));
+    }
+
+    function renderEvents(filterCat='all', query=''){ 
+      const q = query.trim().toLowerCase();
+      const items = eventsData.filter(e=> (filterCat==='all' || e.cat===filterCat));
+
+      const filtered = items.map(group=>{
+        if(!q) return group;
+        const matched = group.items.filter(it=> it.toLowerCase().includes(q) || group.title.toLowerCase().includes(q));
+        return {...group, items: matched};
+      }).filter(g=> g.items.length>0 || !q);
+
+      eventCards.innerHTML = filtered.map(group=>{
+        // Create itemsHtml ensuring <ul> contains only <li> children (no stray text nodes)
+        let itemsHtml = '<p class="no-items">No events found</p>';
+        if (group.items.length) {
+          const lis = group.items.map(x => '<li>' + escapeHTML(x) + '</li>').join('');
+          itemsHtml = '<ul>' + lis + '</ul>';
+        }
+        return `
+          <article class="event-card" aria-label="${escapeHTML(group.cat)} - ${escapeHTML(group.title)}">
+            <div class="event-top">
+              <div>
+                <div class="pill" style="display:inline-flex; align-items:center; gap:8px">
+                  <span aria-hidden="true">🏷️</span> ${escapeHTML(group.cat)}
+                </div>
+                <h3>${escapeHTML(group.title)}</h3>
+              </div>
+              <div class="emoji" aria-hidden="true">${group.emoji}</div>
+            </div>
+            ${itemsHtml}
+            <div class="form-actions" style="margin-top: 12px">
+              <button class="btn primary" type="button" data-register="${escapeHTML(group.cat)}"><span aria-hidden="true">🧾</span> Register for this Category <span class="arrow" aria-hidden="true">→</span></button>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      // hook register buttons
+      $$('[data-register]').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const cat = btn.getAttribute('data-register');
+          // move user to register
+          document.getElementById('register')?.scrollIntoView({behavior:'smooth', block:'start'});
+          const sel = $('#eventSelection');
+          if(sel){
+            sel.value = cat;
+            sel.dispatchEvent(new Event('change', {bubbles:true}));
+          }
+          toast('Category selected', `You picked: ${cat}. Fill the form and submit.` , '✅');
+        });
+      });
+    }
+
+    function currentFilter(){
+      const active = chips.find(c=>c.dataset.active==='true');
+      return active ? active.dataset.filter : 'all';
+    }
+
+    chips.forEach(ch=>{
+      ch.addEventListener('click', ()=>{
+        chips.forEach(x=>x.dataset.active='false');
+        ch.dataset.active='true';
+        renderEvents(ch.dataset.filter, eventSearch.value);
+      });
+    });
+
+    eventSearch?.addEventListener('input', ()=>{
+      renderEvents(currentFilter(), eventSearch.value);
+    });
+
+    renderEvents('all','');
+
+    // Registration select options
+    const eventSelection = $('#eventSelection');
+    if(eventSelection){
+      const options = eventsData.map(e=>`<option value="${e.cat}">${e.cat}</option>`).join('');
+      eventSelection.insertAdjacentHTML('beforeend', options);
+    }
+
+    /* =============== Schedule Timeline =============== */
+    const schedule = {
+      day1: [
+        {time:'09:30 AM', title:'Inauguration & Cultural Warm-up', venue:'Main Auditorium', coord:'Riya / Team DAKSH'},
+        {time:'11:00 AM', title:'Dance & Music – Solo Rounds', venue:'Stage A', coord:'Vikram / Music Cell'},
+        {time:'02:00 PM', title:'Creative Arts – Live Sketching', venue:'Art Dome', coord:'Creative Heads'},
+        {time:'05:30 PM', title:'Performance Arts – Drama Auditions', venue:'Blackbox Theater', coord:'Theatre Team'},
+      ],
+      day2: [
+        {time:'09:00 AM', title:'Gaming Tournament – Qualifiers', venue:'LAN Hall', coord:'Gaming Core'},
+        {time:'10:30 AM', title:'Literary Events – Debate & Extempore', venue:'Seminar Hall 1', coord:'Literary Coordinators'},
+        {time:'01:30 PM', title:'Battle of Bands & Beatboxing', venue:'Stage B', coord:'Music Ops'},
+        {time:'04:30 PM', title:'Exhibition Walk + Cultural Quiz', venue:'Campus Gallery', coord:'Exhibition Team'},
+      ],
+      day3: [
+        {time:'09:30 AM', title:'Finals – Dance & Western/Classical', venue:'Main Auditorium', coord:'Dance Heads'},
+        {time:'12:00 PM', title:'Fun & Entertainment – Escape Challenge', venue:'Innovation Zone', coord:'Event Heads'},
+        {time:'03:30 PM', title:'Celebrity Night + Talent Showcase', venue:'Open Air Stage', coord:'Show Team'},
+        {time:'06:30 PM', title:'Grand Award Ceremony + Fireworks', venue:'Sports Ground', coord:'Inauguration Committee'},
+      ]
+    };
+
+    const timelineItems = $('#timelineItems');
+    const scheduleTabs = $$('.tab');
+
+    function renderTimeline(dayKey){
+      const items = schedule[dayKey] || [];
+      timelineItems.innerHTML = items.map(it=>`
+        <div class="timeline-item">
+          <div class="timeline-time">${it.time}<small>${it.venue}</small></div>
+          <div class="timeline-body"><b>${it.title}</b><span>Coordinator: ${it.coord}</span></div>
+        </div>
+      `).join('');
+    }
+
+    scheduleTabs.forEach(tab=>{
+      tab.addEventListener('click', ()=>{
+        scheduleTabs.forEach(t=>t.dataset.active='false');
+        tab.dataset.active='true';
+        renderTimeline(tab.dataset.day);
+      });
+    });
+
+    renderTimeline('day1');
+
+    /* =============== Gallery =============== */
+    // Inline SVG placeholder images to keep single-file.
+    function svgDataUri(label, c1, c2){
+      const svg = `
+        <svg xmlns='http://www.w3.org/2000/svg' width='900' height='675'>
+          <defs>
+            <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+              <stop offset='0' stop-color='${c1}' stop-opacity='0.85'/>
+              <stop offset='1' stop-color='${c2}' stop-opacity='0.85'/>
+            </linearGradient>
+            <filter id='n' x='-20%' y='-20%' width='140%' height='140%'>
+              <feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/>
+              <feColorMatrix type='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .08 0'/>
+            </filter>
+          </defs>
+          <rect width='900' height='675' fill='url(#g)'/>
+          <rect width='900' height='675' filter='url(#n)' opacity='.35'/>
+          <g opacity='.9'>
+            <circle cx='160' cy='170' r='110' fill='rgba(255,255,255,.12)'/>
+            <circle cx='740' cy='180' r='130' fill='rgba(255,255,255,.10)'/>
+            <circle cx='520' cy='560' r='190' fill='rgba(0,0,0,.08)'/>
+          </g>
+          <g>
+            <text x='50%' y='52%' text-anchor='middle' dominant-baseline='middle' font-size='44' font-weight='900'
+              fill='rgba(255,255,255,.92)' font-family='ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial'>${label}</text>
+            <text x='50%' y='60%' text-anchor='middle' dominant-baseline='middle' font-size='20' font-weight='750'
+              fill='rgba(255,255,255,.80)' font-family='ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial'>DAKSH - 4.0</text>
+          </g>
+        </svg>`;
+      return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg.trim());
+    }
+
+    const gallery = [
+      {type:'img', title:'Stage Lights', subtitle:'Performance Arts', c1:'#6C63FF', c2:'#00D9FF', label:'Stage Lights'},
+      {type:'img', title:'Creative Corner', subtitle:'Art & Design', c1:'#00D9FF', c2:'#FF6584', label:'Creative Corner'},
+      {type:'img', title:'Campus Energy', subtitle:'Fest Vibes', c1:'#FF6584', c2:'#6C63FF', label:'Campus Energy'},
+      {type:'img', title:'Finals Day', subtitle:'Talent Showcase', c1:'#6C63FF', c2:'#FF6584', label:'Finals Day'},
+      {type:'video', title:'Open Air Concert', subtitle:'Highlights', posterLabel:'Concert', c1:'#00D9FF', c2:'#6C63FF'},
+      {type:'img', title:'Gallery Walk', subtitle:'Exhibition & Culture', c1:'#FF6584', c2:'#00D9FF', label:'Gallery Walk'},
+      {type:'img', title:'Dramatic Moments', subtitle:'Theatre & Drama', c1:'#6C63FF', c2:'#00D9FF', label:'Dramatic Moments'},
+      {type:'img', title:'Creative Flow', subtitle:'Sketching & Rangoli', c1:'#00D9FF', c2:'#FF6584', label:'Creative Flow'},
+      {type:'video', title:'Dance Finals', subtitle:'Dance & Music', posterLabel:'Dance Finals', c1:'#6C63FF', c2:'#FF6584'},
+    ];
+
+    const galleryGrid = $('#galleryGrid');
+
+    function renderGallery(){
+      galleryGrid.innerHTML = gallery.map(item=>{
+        if(item.type === 'img'){
+          const src = svgDataUri(item.label, item.c1, item.c2);
+          return `
+            <figure class="g-item">
+              <img class="g-thumb" loading="lazy" decoding="async" alt="${item.title}" src="${src}" data-lightbox="image" data-title="${item.title}" data-src="${src}" />
+              <figcaption class="g-meta">
+                <b>${item.title}</b>
+                <span>${item.subtitle}</span>
+              </figcaption>
+            </figure>
+          `;
+        }
+
+        // video placeholders with a short mp4 not available offline; use HTML5 with no src and still open preview.
+        // We'll use a poster SVG and embed a YouTube placeholder link via data.
+        const poster = svgDataUri(item.posterLabel || item.title, item.c1, item.c2);
+        const yt = 'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0';
+        return `
+          <figure class="g-item">
+            <div style="position:relative">
+              <img class="g-thumb" loading="lazy" decoding="async" alt="${item.title}" src="${poster}" data-lightbox="video" data-title="${item.title}" data-video="${yt}" style="aspect-ratio: 16/10" />
+              <div style="position:absolute; inset:auto 14px 14px auto; background: rgba(0,0,0,.35); border:1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.95); padding:10px 12px; border-radius: 999px; font-weight: 950; display:flex; gap:8px; align-items:center">
+                <span aria-hidden="true">▶</span> Video
+              </div>
+            </div>
+            <figcaption class="g-meta">
+              <b>${item.title}</b>
+              <span>${item.subtitle}</span>
+            </figcaption>
+          </figure>
+        `;
+      }).join('');
+
+      // lazy click hook
+      $$('[data-lightbox="image"], [data-lightbox="video"]').forEach(el=>{
+        el.style.cursor='pointer';
+        el.addEventListener('click', ()=>{
+          const title = el.dataset.title || 'Preview';
+          $('#lightboxTitle').textContent = title;
+
+          const media = $('#lightboxMedia');
+          if(el.dataset.lightbox === 'image'){
+            const src = el.dataset.src;
+            media.innerHTML = `<img src="${src}" alt="${title}" />`;
+          }else{
+            const v = el.dataset.video;
+            media.innerHTML = `<div style="border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,.14)" aria-label="Video preview">
+              <iframe title="${title}" src="${v}" width="100%" height="480" style="border:0; display:block" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>`;
+          }
+
+          const lb = $('#lightbox');
+          lb.dataset.open = 'true';
+          lb.setAttribute('aria-hidden','false');
+        });
+      });
+    }
+
+    renderGallery();
+
+    // Lightbox close
+    const lightbox = $('#lightbox');
+    $('#lightboxClose')?.addEventListener('click', ()=>{
+      lightbox.dataset.open = 'false';
+      lightbox.setAttribute('aria-hidden','true');
+      $('#lightboxMedia').innerHTML = '';
+    });
+    lightbox?.addEventListener('click', (e)=>{
+      if(e.target === lightbox){
+        $('#lightboxClose').click();
+      }
+    });
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape' && lightbox.dataset.open === 'true'){
+        $('#lightboxClose')?.click();
+      }
+    });
+
+    /* =============== Toast Notifications =============== */
+    const toastWrap = $('#toastWrap');
+    function toast(title, message, icon='✨'){
+      if(!toastWrap) return;
+      const t = document.createElement('div');
+      t.className = 'toast';
+      t.setAttribute('role','status');
+      t.innerHTML = `
+        <div class="ticon" aria-hidden="true">${icon}</div>
+        <div>
+          <b>${title}</b>
+          <span>${message}</span>
+        </div>
+      `;
+      toastWrap.appendChild(t);
+      setTimeout(()=>{
+        t.style.transition = 'opacity .25s var(--ease), transform .25s var(--ease)';
+        t.style.opacity = '0';
+        t.style.transform = 'translateY(8px)';
+        setTimeout(()=>t.remove(), 280);
+      }, 3400);
+    }
+
+    /* =============== Registration Form =============== */
+    const regForm = $('#regForm');
+    const regStatus = $('#regStatus');
+    const regSummary = $('#regSummary');
+    const qrBtn = $('#qrBtn');
+
+    function showFieldError(input, msg){
+      input.setCustomValidity(msg);
+      input.classList.add('err');
+    }
+    function clearFieldError(input){
+      input.setCustomValidity('');
+      input.classList.remove('err');
+    }
+
+    function validatePhone(s){
+      return /^\d{10}$/.test(String(s||''));
+    }
+
+    regForm?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      regStatus.textContent = '';
+
+      const fullName = $('#fullName');
+      const collegeName = $('#collegeName');
+      const branch = $('#branch');
+      const semester = $('#semester');
+      const email = $('#email');
+      const phone = $('#phone');
+      const gender = $('#gender');
+      const eventSelection = $('#eventSelection');
+
+      const fields = [fullName, collegeName, branch, semester, email, phone, gender, eventSelection];
+      fields.forEach(f=>clearFieldError(f));
+
+      let ok = true;
+
+      if(!fullName.value || fullName.value.trim().length < 2){ ok=false; showFieldError(fullName, 'Enter a valid full name (min 2 chars).'); }
+      if(!collegeName.value || collegeName.value.trim().length < 2){ ok=false; showFieldError(collegeName, 'Enter a valid college name.'); }
+      if(!branch.value || branch.value.trim().length < 2){ ok=false; showFieldError(branch, 'Enter a valid branch.'); }
+      if(!semester.value){ ok=false; showFieldError(semester, 'Select semester.'); }
+      if(!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())){ ok=false; showFieldError(email, 'Enter a valid email address.'); }
+      if(!validatePhone(phone.value)){ ok=false; showFieldError(phone, 'Phone must be exactly 10 digits.'); }
+      if(!gender.value){ ok=false; showFieldError(gender, 'Select gender.'); }
+      if(!eventSelection.value){ ok=false; showFieldError(eventSelection, 'Choose an event category.'); }
+
+      if(!ok){
+        toast('Fix form errors', 'Please review the highlighted fields and try again.', '⚠️');
+        // focus first invalid
+        const firstInvalid = fields.find(f=>f.validationMessage || f.getCustomValidity());
+        (firstInvalid || fields.find(f=>!f.checkValidity()))?.focus?.();
+        return;
+      }
+
+      const payload = {
+        fullName: fullName.value.trim(),
+        collegeName: collegeName.value.trim(),
+        branch: branch.value.trim(),
+        semester: semester.value,
+        email: email.value.trim(),
+        phone: phone.value.trim(),
+        gender: gender.value,
+        eventCategory: eventSelection.value
+      };
+
+      // Store locally (single-file demo)
+      try{ localStorage.setItem('daksh-registration', JSON.stringify({payload, at: Date.now()})); }catch(e){}
+
+      const ref = 'DAKSH-' + Math.random().toString(16).slice(2,8).toUpperCase();
+      regStatus.textContent = 'Registration successful!';
+      regSummary.style.display = 'block';
+      regSummary.innerHTML = `
+        <b>Registration Summary</b><br/>
+        <span class="help" style="margin-top:6px; display:block">Reference ID: <b>${ref}</b></span>
+        <span class="help" style="margin-top:6px; display:block">Category: <b>${payload.eventCategory}</b></span>
+        <span class="help" style="margin-top:6px; display:block">Name: <b>${payload.fullName}</b> • ${payload.collegeName}</span>
+        <span class="help" style="margin-top:6px; display:block">We’ll announce further details on the official schedule updates.</span>
+      `;
+
+      toast('Registration confirmed', `Welcome, ${payload.fullName.split(' ')[0]}! Your reference ID: ${ref}` , '✅');
+
+      // optional: open QR option
+      qrBtn?.dataset.lastRef = ref;
+    });
+
+    qrBtn?.addEventListener('click', ()=>{
+      const lastRef = qrBtn.dataset.lastRef || 'DAKSH-QR-READY';
+      // Simple QR-like visual via SVG (not a real QR). Keeps file single.
+      const box = document.createElement('div');
+      box.style.padding = '14px';
+      box.innerHTML = `
+        <div style="display:flex; align-items:center; gap: 12px; margin-bottom: 10px">
+          <div class="logo-mark" aria-hidden="true" style="width:44px;height:44px"></div>
+          <div>
+            <b style="font-size:16px; font-weight:980">DAKSH Registration QR</b>
+            <div style="color: var(--muted); font-weight: 750; margin-top: 6px">Reference: ${lastRef}</div>
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items:start">
+          <div style="border-radius: 18px; border: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.06); padding: 12px">
+            <svg width="240" height="240" viewBox="0 0 240 240" aria-label="QR code visual" role="img">
+              <rect x="0" y="0" width="240" height="240" fill="rgba(255,255,255,.06)"/>
+              <rect x="14" y="14" width="212" height="212" rx="22" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.18)"/>
+              ${Array.from({length: 21}).map((_,i)=>{
+                const row = i;
+                return Array.from({length: 21}).map((__,j)=>{
+                  const col = j;
+                  // deterministic pattern from ref
+                  const seed = (lastRef.charCodeAt((row+col)%lastRef.length) + row*17 + col*13) % 100;
+                  const on = seed % 3 === 0 || (row<7 && col<7) || (row>13 && col<7);
+                  return on ? `<rect x="${14 + j*10}" y="${14 + row*10}" width="8" height="8" rx="2" fill="rgba(255,255,255,.92)"/>` : '';
+                }).join('');
+              }).join('')}
+              <text x="50%" y="222" text-anchor="middle" font-size="12" font-weight="900" fill="rgba(255,255,255,.86)" font-family="ui-sans-serif, system-ui">SCAN ME</text>
+            </svg>
+          </div>
+          <div>
+            <b style="font-weight: 980">How to use</b>
+            <p class="help" style="margin-top:8px">Show this QR at the registration desk for quick check-in. (Demo visual; replace with real QR generator if needed.)</p>
+            <div class="pill-row">
+              <span class="pill">Fast check-in</span>
+              <span class="pill">Reference verified</span>
+              <span class="pill">On-device ready</span>
+            </div>
+            <div class="form-actions" style="margin-top: 14px">
+              <button class="btn" type="button" id="qrCloseBtn"><span aria-hidden="true">✕</span> Close <span class="arrow" aria-hidden="true">→</span></button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Show in lightbox
+      const lb = $('#lightbox');
+      $('#lightboxTitle').textContent = 'QR Registration';
+      $('#lightboxMedia').innerHTML = '';
+      lb.dataset.open = 'true';
+      lb.setAttribute('aria-hidden','false');
+      $('#lightboxMedia').appendChild(box);
+
+      $('#lightboxClose')?.focus?.();
+      setTimeout(()=>{
+        $('#qrCloseBtn')?.addEventListener('click', ()=>$('#lightboxClose')?.click());
+      }, 0);
+    });
+
+    /* =============== Contact Form + Newsletter =============== */
+    const contactForm = $('#contactForm');
+    const contactStatus = $('#contactStatus');
+
+    contactForm?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      contactStatus.textContent = '';
+
+      const n = $('#cName');
+      const em = $('#cEmail');
+      const msg = $('#cMsg');
+      if(n.value.trim().length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim()) || msg.value.trim().length < 10){
+        toast('Message not sent', 'Please provide valid details (name, email, message).', '⚠️');
+        contactStatus.textContent = 'Please correct the form.';
+        return;
+      }
+
+      toast('Message received', 'Thanks! We’ll respond shortly.', '✅');
+      contactStatus.textContent = 'Thanks! Your message has been sent.';
+      contactForm.reset();
+    });
+
+    const newsletterForm = $('#newsletterForm');
+    const newsEmail = $('#newsEmail');
+    const newsStatus = $('#newsStatus');
+
+    newsletterForm?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const v = newsEmail.value.trim();
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){
+        toast('Invalid email', 'Enter a valid email to subscribe.', '⚠️');
+        newsStatus.textContent = 'Please enter a valid email address.';
+        newsEmail.focus();
+        return;
+      }
+      try{ localStorage.setItem('daksh-newsletter', JSON.stringify({v, at: Date.now()})); }catch(e){}
+      toast('Subscribed', 'You’re on the list. Watch for schedule updates!', '📬');
+      newsStatus.textContent = 'Subscribed successfully!';
+      newsletterForm.reset();
+    });
+
+    /* =============== Sponsors Logo Slider =============== */
+    (function sponsors(){
+      const track = $('#logoTrack');
+      if(!track) return;
+      const names = [
+        {t:'Title Sponsor', n:'AstraNova Labs'},
+        {t:'Gold Sponsor', n:'SkyPeak Technologies'},
+        {t:'Gold Sponsor', n:'ByteCraft Solutions'},
+        {t:'Silver Sponsor', n:'NeonWave Studio'},
+        {t:'Community Partner', n:'EduSphere'},
+        {t:'Community Partner', n:'CampusConnect'},
+        {t:'Silver Sponsor', n:'Quantum Bloom'},
+        {t:'Gold Sponsor', n:'PrismWorks'}
+      ];
+
+      const build = ()=> names.map(s=>`<div class="logo" title="${s.t}">${s.n}</div>`).join('');
+      // Duplicate for marquee
+      track.innerHTML = build() + build();
+      track.style.width = 'max-content';
+
+      // pause on hover (optional)
+      const strip = track.closest('.logo-strip');
+      if(strip){
+        strip.addEventListener('mouseenter', ()=> track.style.animationPlayState = 'paused');
+        strip.addEventListener('mouseleave', ()=> track.style.animationPlayState = 'running');
+      }
+    })();
+
+    /* =============== Testimonials Carousel =============== */
+    (function testimonials(){
+      const slides = [
+        {who:'Student', title:'Amazing experience!', quote:'DAKSH - 4.0 felt premium from the first scroll. The categories are well organized and the registration flow is smooth.'},
+        {who:'Alumni', title:'Honoring talent', quote:'The event lineup balances culture and creativity perfectly. The schedule timeline is easy to follow, and the UI looks professional.'},
+        {who:'Guest', title:'High energy!', quote:'From dance finals to art showcases, everything was engaging. The gallery preview and animations made the experience unforgettable.'}
+      ];
+      const track = $('#carouselTrack');
+      const dots = $('#carouselDots');
+      if(!track || !dots) return;
+
+      track.innerHTML = slides.map(s=>`
+        <div class="t-item">
+          <div class="t-card">
+            <p><b style="background: linear-gradient(90deg,var(--primary),var(--accent)); -webkit-background-clip:text; background-clip:text; color: transparent;">${s.title}</b><br/>${s.quote}</p>
+            <div class="t-meta">
+              <div class="pill"><span aria-hidden="true">👤</span> ${s.who} Reviews</div>
+              <div class="help help--no-margin">— DAKSH Participant</div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      let idx=0;
+      dots.innerHTML = slides.map((_,i)=>`<div class="dot" data-i="${i}" ${i===0?'data-active="true"':''}></div>`).join('');
+      const dotEls = $$('.dot', dots);
+
+      function setIdx(n){
+        idx = (n + slides.length) % slides.length;
+        track.style.transform = `translateX(${-idx*100}%)`;
+        dotEls.forEach(d=>d.dataset.active = d.dataset.i==idx ? 'true' : 'false');
+      }
+
+      setIdx(0);
+
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(!prefersReduced){
+        let timer = setInterval(()=> setIdx(idx+1), 5200);
+        const card = track.closest('.carousel');
+        card?.addEventListener('mouseenter', ()=> clearInterval(timer));
+        card?.addEventListener('mouseleave', ()=> timer=setInterval(()=>setIdx(idx+1),5200));
+      }
+    })();
+
+    /* =============== Footer year =============== */
+    $('#year').textContent = new Date().getFullYear();
+
+  </script>
+</body>
+</html>
+
+
