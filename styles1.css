@@ -591,9 +591,6 @@
 /* Timeline item hover polish */
 .timeline-item{ transition: transform .22s var(--ease), border-color .22s var(--ease), background .22s var(--ease) }
 .timeline-item:hover{ transform: translateY(-2px); border-color: rgba(255,255,255,.22); background: rgba(255,255,255,.06) }
-
-
-```css
 .team-social{
   display:flex;
   gap:10px;
@@ -644,8 +641,87 @@
 .team-card .avatar{
   margin:0 auto 15px;
 }
-```
 
+
+```css
+.member-actions{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:12px;
+}
+
+.action-icon{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    color:#fff;
+    font-size:14px;
+
+    transition:all .35s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.action-icon::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.25),
+        transparent
+    );
+    opacity:0;
+    transition:.35s;
+}
+
+.action-icon:hover::before{
+    opacity:1;
+}
+
+.action-icon.call:hover{
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+    transform:translateY(-4px) scale(1.08);
+    box-shadow:0 10px 25px rgba(34,197,94,.4);
+}
+
+.action-icon.instagram:hover{
+    background:linear-gradient(
+        135deg,
+        #833AB4,
+        #E1306C,
+        #F77737
+    );
+    transform:translateY(-4px) scale(1.08);
+    box-shadow:0 10px 25px rgba(225,48,108,.4);
+}
+
+.team-card:hover .action-icon{
+    transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+    .action-icon{
+        width:34px;
+        height:34px;
+        font-size:13px;
+    }
+}
 
 
 
