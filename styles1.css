@@ -344,9 +344,187 @@
 .social a:hover{background: rgba(255,255,255,.09); color: var(--fg);}
 
 /* Team profile cards */
-.profile{display:flex; align-items:center; gap: 15px}
-.avatar{width: 60px; height: 60px; border-radius: 18px; display:grid; place-items:center; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06); font-size: 22px; overflow:hidden; position:relative}
-.avatar-img{width:100%; height:100%; object-fit:cover; display:block; border-radius: 18px}
+/* =========================
+   DAKSH 4.0 TEAM SECTION
+========================= */
+
+#team {
+  padding: 100px 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 24px;
+  transition: all 0.35s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  border-color: #f9c74f;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Principal Card */
+
+.team-card.featured {
+  grid-column: 1 / -1;
+  max-width: 750px;
+  margin: 0 auto 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 199, 79, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  border: 1px solid rgba(249, 199, 79, 0.3);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.avatar {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  transition: 0.3s ease;
+}
+
+.team-card:hover .avatar {
+  border-color: #f9c74f;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Principal Avatar */
+
+.featured .avatar {
+  width: 110px;
+  height: 110px;
+}
+
+.profile h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.featured h4 {
+  font-size: 1.5rem;
+}
+
+.profile span {
+  display: block;
+  margin-top: 5px;
+  color: #b8bcc7;
+  font-size: 0.95rem;
+}
+
+.featured span {
+  font-size: 1rem;
+  color: #f9c74f;
+}
+
+/* Social Links */
+
+.social {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.social a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: 0.3s ease;
+}
+
+.social a:hover {
+  background: #f9c74f;
+  color: #111;
+}
+
+/* Section Heading */
+
+.section-head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-head h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.section-head p {
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social {
+    justify-content: center;
+  }
+
+  .featured .avatar {
+    width: 95px;
+    height: 95px;
+  }
+
+  .section-head h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    padding: 20px;
+  }
+
+  .avatar {
+    width: 75px;
+    height: 75px;
+  }
+}
 
 .call-btn{
   display:inline-flex;
